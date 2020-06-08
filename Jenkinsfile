@@ -1,4 +1,5 @@
 pipeline {
+    properties([parameters([string(defaultValue: 'http://169.254.169.254/latest', description: '', name: 'metadata', trim: false)])])
     agent any
     stages {
         stage('Build') {
